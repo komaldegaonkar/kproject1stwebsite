@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Komal Degaonkar - Professional Resume</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;600&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pIcF5aGmjXQv0BTXb6X6E3qjBf3Q6+vszOX4+V8N7IJAyqypuXybvzjG+HgJ+N9KXGTSnihXO8+jRVOTH4bd8w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    /* Reset */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Base Body Styles */
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f5f5f7;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    /* Container with fixed width */
+    .resume-container {
+      width: 850px;
+      background: radial-gradient(circle at top left, #314755, #26a0da);
+      border-radius: 15px;
+      padding: 40px 50px;
+      box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.4),
+        inset 0 0 30px #00b4db,
+        inset 0 -10px 70px #0083b0;
+      position: relative;
+      overflow: hidden;
+      /* subtle floating animation */
+      animation: floating 6s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        box-shadow:
+          0 4px 15px rgba(0, 0, 0, 0.4),
+          inset 0 0 30px #00b4db,
+          inset 0 -10px 70px #0083b0;
+      }
+      50% {
+        transform: translateY(-10px) rotate(-1deg);
+        box-shadow:
+          0 9px 25px rgba(0, 0, 0, 0.5),
+          inset 0 0 40px #00e0ff,
+          inset 0 -15px 90px #00a3df;
+      }
+    }
+
+    /* Header Section */
+    header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+      padding-bottom: 20px;
+      position: relative;
+    }
+
+    header h1 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 3.1rem;
+      text-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.5),
+        0 0 10px #00e0ff;
+      flex: 1;
+      letter-spacing: 2px;
+      color: #dff9fb;
+      position: relative;
+    }
+
+    /* Animated underline for name */
+    header h1::after {
+      content: "";
+      position: absolute;
+      bottom: -7px;
+      left: 0;
+      height: 4px;
+      width: 0%;
+      background: linear-gradient(90deg, #00e0ff, #005f99);
+      border-radius: 2px;
+      transition: width 0.8s ease;
+      box-shadow: 0 0 8px #00e0ff;
+    }
+
+    header h1:hover::after {
+      width: 100%;
+    }
+
+    /* Title under name */
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #a0d8ef;
+      text-shadow: 1px 1px 3px #004d66;
+    }
+
+    /* Contact Info */
+    .contact-info {
+      margin-top: 12px;
+      display: flex;
+      gap: 20px;
+      color: #e0f7fa;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .contact-info i {
+      margin-right: 8px;
+      color: #00bcd4;
+      filter: drop-shadow(0 0 2px #00e0ff);
+    }
+
+    /* Sections Style */
+    section {
+      margin-bottom: 40px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      position: relative;
+    }
+
+    section:last-child {
+      border-bottom: none;
+      margin-bottom: 10px;
+    }
+
+    /* Section Heading */
+    section h2 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #c0e8fc;
+      text-shadow: 1px 1px 4px #006064;
+      position: relative;
+      cursor: default;
+      /* slide in animation */
+      animation: slideIn 1s ease forwards;
+      opacity: 0;
+    }
+
+    section h2:nth-child(1) { animation-delay: 0.1s; }
+    section h2:nth-child(2) { animation-delay: 0.3s; }
+    section h2:nth-child(3) { animation-delay: 0.5s; }
+    section h2:nth-child(4) { animation-delay: 0.7s; }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+    }
+    .photo-container {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 3.5px solid var(--neon-blue);
+            box-shadow:
+      0 0 15px var(--glow-color),
+      0 0 30px var(--glow-color),
+      0 0 50px var(--glow-color);
+    overflow: hidden;
+            background: #fff url('https://via.placeholder.com/160') center/cover no-repeat;
+            margin-bottom: 30px;
+            animation: fadeScaleIn 1s ease forwards;
+            transform-origin: center;
+        }
+
+        /* Photo hover transformation */
+        .photo-container:hover {
+            transform: scale(1.08) rotate(3deg);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.4);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+        .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85);
+    user-select: none;
+  }
+      /* Experience & Education List */
+    .list-item {
+      background: rgba(0, 99, 144, 0.25);
+      border-radius: 8px;
+      padding: 18px 25px;
+      margin-bottom: 20px;
+      box-shadow:
+        0 5px 15px rgba(0, 110, 190, 0.25);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: default;
+    }
+
+    .list-item:hover {
+      transform: translateX(10px) scale(1.03);
+      box-shadow:
+        0 12px 25px rgba(0, 165, 255, 0.6),
+        inset 0 0 12px #00c6ff;
+      background: rgba(0, 150, 220, 0.3);
+    }
+
+    .list-item h3 {
+      font-family: "Montserrat", sans-serif;
+      color: #b4e0fc;
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin-bottom: 4px;
+      text-shadow: 1px 1px 6px #004d66;
+    }
+
+    .list-item span.date {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #8cc7ff;
+      letter-spacing: 0.04em;
+      text-shadow: 1px 1px 3px #00334d;
+    }
+
+    .list-item p {
+      margin-top: 8px;
+      line-height: 1.5;
+      color: #cce7ff;
+      font-weight: 300;
+    }
+
+    /* Skills Section */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skill-pill {
+      background: linear-gradient(135deg, #00c3ff, #0054a6);
+      padding: 10px 18px;
+      border-radius: 50px;
+      box-shadow: 0 3px 12px rgba(0, 170, 255, 0.7);
+      font-weight: 600;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.95rem;
+      color: #e0f7ff;
+      cursor: default;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-pill i {
+      color: #aee7ff;
+      filter: drop-shadow(0 0 2px #00d6ff);
+      font-size: 1.1rem;
+    }
+
+    .skill-pill:hover {
+      background: linear-gradient(135deg, #00ecff, #005f99);
+      box-shadow: 0 6px 22px rgba(0, 223, 255, 0.9);
+      transform: scale(1.1);
+    }
+
+   /* Quote styling */
+  .quote {
+    font-size: 1.15rem;
+    font-family: var(--font-quote);
+    font-style: italic;
+    color: #80dfff;
+    margin-bottom: 8px;
+    text-shadow:
+      0 0 6px #54c9ffaa,
+      0 0 12px #00e5ff88;
+    border-left: 4px solid #00bfff;
+    padding-left: 16px;
+    transition: color 0.6s ease;
+    cursor: default;
+  }
+  .quote:hover {
+    color: #00ffffbb;
+  }
+  .author {
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: right;
+    color: #00bbffdd;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.7px;
+    text-shadow: 0 0 5px #0085ffbb;
+    cursor: default;
+  }
+  /* Contact Form */
+  form.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  form.contact-form input[type="text"],
+  form.contact-form input[type="email"],
+  form.contact-form input[type="tel"],
+  form.contact-form textarea {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-family: var(--font-main);
+    color: #002f5c;
+    font-weight: 600;
+    outline-offset: 2px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: inset 0 0 6px #0088ff88;
+  }
+  form.contact-form input[type="text"]:focus,
+  form.contact-form input[type="email"]:focus,
+  form.contact-form input[type="tel"]:focus,
+  form.contact-form textarea:focus {
+    box-shadow: 0 0 8px #00ffffcc;
+  }
+  form.contact-form textarea {
+    resize: vertical;
+    min-height: 90px;
+    font-family: var(--font-main);
+  }
+     /* Send button */
+  form.contact-form button {
+    align-self: flex-start;
+    padding: 10px 28px;
+    background: linear-gradient(45deg, #00e5ff, #008aff);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow:
+      0 0 10px #00e5ffcc,
+      0 0 18px #00bfffaa;
+    transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+  }
+  form.contact-form button:hover {
+    background: linear-gradient(45deg, #00ffff, #005ea6);
+    box-shadow:
+      0 0 20px #00ffffdd,
+      0 0 30px #00ccffbb;
+    transform: scale(1.07);
+  }
+
+
+
+    /* Bottom copyright and hashtag */
+    .bottom-bar {
+    margin-top: 1.8rem;
+    font-size: 0.85rem;
+    color: #77dfffaa;
+    letter-spacing: 0.2em;
+    text-align: center;
+    user-select: none;
+  }
+  .hashtag {
+    font-weight: 700;
+    color: var(--neon-blue);
+    text-shadow:
+      0 0 10px var(--neon-blue),
+      0 0 25px #00bfff;
+    margin-bottom: 4px;
+  }
+      /* Scrollbar Styling for browsers that support it */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #00aaffcc;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container" role="main" aria-label="Resume of Komal Degaonkar">
+         <div class="photo-container" aria-label="Place for your photo" tabindex="0">
+      <!-- 
+        Insert your image by replacing the URL below with your photo URL.
+        Example: 
+        <img src="https://your-image-link.com/photo.jpg" alt="Komal Degaonkar Photo" />
+      -->
+      <img src="C:\Users\KOMAL\OneDrive\Pictures\Screenshots\komalpic.JPG" alt="Komal Degaonkar Photo" />
+    </div>
+    <header>
+      <div>
+        <h1 tabindex="0">Komal Degaonkar</h1>
+        <div class="title" tabindex="0">Website designer</div>
+        <div class="contact-info" aria-label="Contact information">
+            <ul>
+          <div><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+1234567890" style="color:#ace7ff; text-decoration:none;"> +1 234 567 890</a></div>
+          <div><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:john.doe@example.com" style="color:#ace7ff; text-decoration:none;"> komaldegaonkar@gmail.com</a></div>
+          <div><i class="fa-brands fa-linkedin" aria-hidden="true"></i><a href="https://linkedin.com/in/komaldeg" target="_blank" rel="noopener" style="color:#ace7ff; text-decoration:none;">https://linkedin.com/in/komaldeg</a></div>
+          <div><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Maharashtra, India</div>
+        </div>
+        </ul>
+      </div>
+    </header>
+
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">About me</h2>
+      <p tabindex="0">
+        As a budding web designer with a passion for learning, I'm building my skills in HTML and CSS to create 
+visually appealing and user-friendly websites. Currently exploring C programming, I'm expanding my technical 
+expertise to drive creative solutions and improve my web development skills. With a strong enthusiasm for 
+learning and growth, I'm excited to apply my skills and knowledge to real-world projects and continue 
+improving my craft.
+      </p>
+    </section>
+
+    <section aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Skills</h2>
+
+      <article class="list-item" tabindex="0" aria-label="My skills">
+        <h3 id="My skills">My skills</h3>
+           <ul>
+        <li>Problem solving skills</li>
+        <li>Attention to detail</li>
+        <li>Logical thinking</li>
+        <li>Creativity</li>
+        <li>Persistence</li>
+        <li>Continuous learning</li>
+        <li>Teamwork</li>
+        <li>Adaptability</li>
+        <li>Patience</li>
+        <li>Technical skills</li>
+      </ul>
+        </article>
+
+    </section>
+
+    <section aria-labelledby="education-heading">
+      <h2 id="education-heading">Education</h2>
+
+      <article class="list-item" tabindex="0" aria-label="Aspiring website designer">
+        <h3>Aspiring website designer</h3>
+        <span class="date">2025 | May - June | Intellise IT</span>
+        <ol type="i">
+        <li>Newly Qualified Web Designer</li>
+        <li>C Programming Novice</li>
+        </ol>
+      </article>
+    </section>
+
+    <section aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Courses</h2>
+     
+      <div class="skills" role="list" aria-label="Technical skills and tools">
+        <div class="skill-pill" role="listitem" tabindex="0">
+          <i class="fa-brands fa-html5" aria-hidden="true"></i> HTML
+        </div>
+       
+        <div class="skill-pill" role="listitem" tabindex="0">
+          <i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS
+        </div>
+       
+        <div class="skill-pill" role="listitem" tabindex="0">
+          <i class="fa-brands fa-js" aria-hidden="true"></i> C Language
+        </div>
+      
+        <div class="skill-pill" role="listitem" tabindex="0">
+          <i class="fa-brands fa-react" aria-hidden="true"></i> Advance C
+        </div>
+       
+       </div>
+    </section>
+     <section class="section quote-section" aria-label="Inspirational Quote">
+      <blockquote class="quote" aria-describedby="author">"Innovation distinguishes between a leader 
+        and a follower."</blockquote>
+      <div class="author" id="author">- Steve Jobs</div>
+    </section>
+
+      <section class="section contact-section" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <form class="contact-form" aria-label="Contact Form" autocomplete="off" novalidate>
+        <input type="text" placeholder="Your Name" name="name" aria-label="Name" />
+        <input type="email" placeholder="Your Email" name="email" aria-label="Email" />
+        <input type="tel" placeholder="Your Phone" name="phone" aria-label="Phone" pattern="[0-9]{10}" />
+        <textarea placeholder="Your Message" name="message" aria-label="Message"></textarea>
+        <button type="button" aria-label="Send message">Send</button>
+      </form>
+    </section>
+<footer>
+         <div class="bottom-bar" aria-live="polite" aria-atomic="true">
+      <div class="hashtag">#learncoderepeat</div>
+      <div>© 2024 Komal Degaonkar. All rights reserved.</div>
+    </div>
+    </footer>
+  </div>
+</body>
+</html>
